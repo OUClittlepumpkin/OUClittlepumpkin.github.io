@@ -1,141 +1,985 @@
 <!DOCTYPE html>
-<html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Sunburst</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="小南瓜">
-  <meta name="keywords" content="Java,Python">
-  <meta name="description" content="">
-  <script id="hexo-configurations">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="keywords" content="Java,Python">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sunburst">
+<meta property="og:url" content="https:&#x2F;&#x2F;ouclittlepumpkin.github.io&#x2F;index.html">
+<meta property="og:site_name" content="Sunburst">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    theme: 'hexo-theme-lx-master',
-    version: '1.4.5',
-    localsearch:{
-      "enable": false,
-      "trigger": "auto",
-      "top_n_per_article": 1,
-      "unescape": false,
-      "preload": false
-      },
-    path: '-'
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
   };
 </script>
 
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/main.css">
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/jquery.jside.menu.js"></script>
-	<script>
-	$(document).ready(function(){
-	$(".menu-container").jSideMenu({
-	    jSidePosition: "position-right",
-	    jSideSticky: true,
-	    jSideSkin: "endless-river",
-	     });
-	}); 
-	</script>
+
+
+  <link rel="canonical" href="https://ouclittlepumpkin.github.io/"/>
+
+
+
+
+
+  <title>Sunburst</title>
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300|Noto+Serif+SC&amp;display=swap">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+
+
+
+
+
+
+
+
 </head>
-<body>
-<div id="page">
-<div id="lx-aside" style="background-image: url(/images/cover.jpg)">
-  <div class="overlay">
-  <div class="featured">
-    <div class="avatar"><a href="/"><img src="/images/person_1.jpg"></a></div>
-    <span>小南瓜</span>
-    <h2>Sunburst</h2>
-    <span>——Study hard</span>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
     
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sunburst</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Study hard</p>
+      
   </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
 </div>
-<div id="lx-main-content">
-  <div class="lx-post"> 
 
-  <div class="lx-entry padding">
-    <div>
-      <h2><a href="/2019/10/23/Java-%E5%88%9D%E5%AD%A6%E8%80%85-%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%8D%E4%B9%89%E5%88%86%E6%9E%90-%E5%8C%B9%E9%85%8D%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E3%80%81%E5%8F%98%E9%87%8F%E5%90%8D%E3%80%81%E6%96%B9%E6%B3%95%E5%90%8D%E4%BB%A5%E5%8F%8A%E6%93%8D%E4%BD%9C%E8%BF%90%E7%AE%97%E7%AC%A6/">Java 初学者--简单的词义分析(匹配关键字、变量类型、变量名、方法名以及操作运算符)</a></h2>
-      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2019-10-23</span>
-      <p></p>
-    </div>
-  </div>
-  <div class="lx-entry padding">
-    <div>
-      <h2><a href="/2019/10/23/%E6%90%AD%E5%BB%BA%E5%A5%BD-Hexo-%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E5%90%8E%EF%BC%8C%E5%A6%82%E4%BD%95%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">搭建好-Hexo-博客框架后，如何发表博客文章</a></h2>
-      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2019-10-23</span>
-      <p></p>
-    </div>
-  </div>
-  <div class="lx-entry padding">
-    <div>
-      <h2><a href="/2019/10/23/hello-world/">Hello World</a></h2>
-      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2019-10-23</span>
-      <p></p>
-    </div>
-  </div>
- 
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
 
 
-<footer>
-  <div>
-  Copyright &copy; 2019.<a href="/">Sunburst</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.blleng.cn" target="_blank">Lx</a><br>
-  </div>
-</footer>
-  </div>
-</div>
-</div>
 
-<button class="menu-trigger"></button>
-<div class="menu">
-  <div class="menu-head">
-    <span class="layer">
-      <div class="col">
-        <div class="row for-pic">
-          <div class="profile-pic">
-            <a href="/"><img src="/images/person_1.jpg" alt="小南瓜"/></a>
-          </div>
-        </div>
-        <div class="row for-name">
-          <p>小南瓜</p>
-          <span class="tagline">Hello, World!</span>
-        </div>
-      </div>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ouclittlepumpkin.github.io/2019/10/23/Java-%E5%88%9D%E5%AD%A6%E8%80%85-%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%8D%E4%B9%89%E5%88%86%E6%9E%90-%E5%8C%B9%E9%85%8D%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E3%80%81%E5%8F%98%E9%87%8F%E5%90%8D%E3%80%81%E6%96%B9%E6%B3%95%E5%90%8D%E4%BB%A5%E5%8F%8A%E6%93%8D%E4%BD%9C%E8%BF%90%E7%AE%97%E7%AC%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小南瓜">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sunburst">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/23/Java-%E5%88%9D%E5%AD%A6%E8%80%85-%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%8D%E4%B9%89%E5%88%86%E6%9E%90-%E5%8C%B9%E9%85%8D%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E3%80%81%E5%8F%98%E9%87%8F%E5%90%8D%E3%80%81%E6%96%B9%E6%B3%95%E5%90%8D%E4%BB%A5%E5%8F%8A%E6%93%8D%E4%BD%9C%E8%BF%90%E7%AE%97%E7%AC%A6/" itemprop="url">Java 初学者--简单的词义分析(匹配关键字、变量类型、变量名、方法名以及操作运算符)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-23T16:43:07+08:00">
+                2019-10-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-实验目的"><a href="#1-实验目的" class="headerlink" title="1 实验目的"></a>1 实验目的</h2><p>熟悉并掌握 String 类、StringBuffer 类和 StringTokenizer 类的使用，并能对字符串变量进行操作。</p>
+<h2 id="2-实验要求"><a href="#2-实验要求" class="headerlink" title="2 实验要求"></a>2 实验要求</h2><p>要求对一个 Java 程序进行简单的词法分析，找出其中用到的关键字、变量类型、变量名、方法名以及操作运算符，并分别打印出来。</p>
+<h2 id="3-问题分析"><a href="#3-问题分析" class="headerlink" title="3 问题分析"></a>3 问题分析</h2><p><strong>思路</strong>：利用文件输入流读入一行中的语句，定义相应词汇的正则表达式字符串，进行字符匹配，找到所要求的元素并打印出来。</p>
+<p>先分析一下各种词汇的特点：</p>
+<p><strong>关键字</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>关键字一般与其他字符串以空格间隔，除了if、else等</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>访问修饰符</td>
+<td>public, private, protected</td>
+</tr>
+<tr>
+<td>类、接口、抽象类</td>
+<td>class, abstract, interface, implements, extends, new, super, this</td>
+</tr>
+<tr>
+<td>修饰词</td>
+<td>static,  final, native, strictfp, instanceof</td>
+</tr>
+<tr>
+<td>循环</td>
+<td><strong>if, else, while, switch,</strong> case, <strong>default, do, break, continue,</strong> return</td>
+</tr>
+<tr>
+<td>包</td>
+<td>import, package</td>
+</tr>
+<tr>
+<td>数据类型</td>
+<td>byte, short, int, long, float, double, char, boolean, void, enum</td>
+</tr>
+<tr>
+<td>线程</td>
+<td>synchronized, volatile</td>
+</tr>
+<tr>
+<td>异常</td>
+<td>throw, throws, catch, try, finally</td>
+</tr>
+<tr>
+<td>断言</td>
+<td>assert</td>
+</tr>
+<tr>
+<td>瞬时的</td>
+<td>transient</td>
+</tr>
+<tr>
+<td>保留字</td>
+<td>goto, const</td>
+</tr>
+</tbody></table>
+<p><strong>注</strong>：有时候会出现：if(i &lt; 10)、while(i &lt; 10)、else:、switch(char):、default:、do{、break;、continue;这种关键字与与其他字符连结的情况，需要格外注意。</p>
+<p><strong>操作运算符</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>操作运算符</th>
+<th>不包括分隔符[]().,;</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>算术运算符</td>
+<td>+, -, *, /, %, ++, –</td>
+</tr>
+<tr>
+<td>关系运算符</td>
+<td>==, !=, &gt;, &lt;, &gt;=, &lt;=</td>
+</tr>
+<tr>
+<td>位运算符</td>
+<td>&amp;, |, ^, ~, &lt;&lt;, &gt;&gt;, &gt;&gt;&gt;</td>
+</tr>
+<tr>
+<td>逻辑运算符</td>
+<td>&amp;&amp;, ||, !</td>
+</tr>
+<tr>
+<td>赋值运算符</td>
+<td>=, +=, -=, *=, /=, (%)=, &lt;&lt;=, &gt;&gt;=, &amp;=, ^=,</td>
+</tr>
+<tr>
+<td>条件运算符（三元运算符）</td>
+<td>(关系表达式)？ 表达式1: 表达式2</td>
+</tr>
+<tr>
+<td>instanceof 运算符</td>
+<td>( Object reference variable ) instanceof  (class/interface type)</td>
+</tr>
+</tbody></table>
+<p><strong>变量类型</strong>：变量类型一定与其他字符用空格分割开了，所以最好从一行中匹配。一般会在这样的字符串中出现： public <strong>int</strong> balance; 或  <strong>int</strong> balance = 0;</p>
+<p><strong>变量名</strong>：后面带 = 或；如 int <strong>balance</strong> = 0;   或   int <strong>balance</strong>; </p>
+<p><strong>方法名</strong>：后面带（）或（参数）如 <strong>getName</strong>();</p>
+<h2 id="4-准备知识"><a href="#4-准备知识" class="headerlink" title="4 准备知识"></a>4 准备知识</h2><h3 id="4-1-常用类介绍"><a href="#4-1-常用类介绍" class="headerlink" title="4.1 常用类介绍"></a>4.1 常用类介绍</h3><p><strong>StringBuffer 类</strong>：又称为可变字符序列，它是一个类似于 String 的字符串缓冲区，通过某种方法调用可以改变该序列的长度和内容。我们可以使用 StringBuffer 的 append 方法将制定字符串追加到字符串序列。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">StringBufffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">sb.append(<span class="string">"Hello"</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>FileReader 类</strong>：从InputStreamReader 类继承而来，该类按字符读取流中数据。从文件名创建一个 FileReader 并读取数据示例代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> [] charBuffer = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">30</span>];</span><br><span class="line"></span><br><span class="line">FileReader fr = <span class="keyword">new</span> FileReader(<span class="string">"hello.txt"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(fr.read(charBuffer) != -<span class="number">1</span>)&#123;</span><br><span class="line">    System.out.println(charBuffer);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>StringTokenizer 类</strong>：StringTokenizer 类属于 java.util 包，用于分隔字符串。</p>
+<p>StringTokenizer 构造方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">StringTokenizer(String str，String delim); </span><br><span class="line"><span class="comment">//构造一个用来解析 str 的 StringTokenizer 对象</span></span><br><span class="line"><span class="comment">//并提供指定的分隔符（可以提供多个分隔符）</span></span><br></pre></td></tr></table></figure>
+
+<p>StringTokenizer 常用方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">countTokens</span><span class="params">()</span></span>;  <span class="comment">//返回 nextToken 方法被调用的次数。</span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">hasMoreTokens</span><span class="params">()</span></span>;   <span class="comment">//返回是否还有分隔符。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-正则表达式及匹配的参考代码"><a href="#4-2-正则表达式及匹配的参考代码" class="headerlink" title="4.2 正则表达式及匹配的参考代码"></a>4.2 正则表达式及匹配的参考代码</h3><p><strong>正则表达式语法</strong>：</p>
+<table>
+<thead>
+<tr>
+<th align="center">常见的要匹配的字符</th>
+<th align="center">对应的元字符</th>
+<th align="center">在正则表达式中的写法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">a,b,c字符中的任意一个字符</td>
+<td align="center">[abc]</td>
+<td align="center">[abc]</td>
+</tr>
+<tr>
+<td align="center">除 a,b,c 以外的其他字符</td>
+<td align="center">[^abc]</td>
+<td align="center">[^abc]</td>
+</tr>
+<tr>
+<td align="center">任意一个字符</td>
+<td align="center">.</td>
+<td align="center">.</td>
+</tr>
+<tr>
+<td align="center">数字字符</td>
+<td align="center">\d 或 [0-9]</td>
+<td align="center">[0-9] 或 \\d</td>
+</tr>
+<tr>
+<td align="center">非数字字符</td>
+<td align="center">\D</td>
+<td align="center">[^0-9] 或 \\D</td>
+</tr>
+<tr>
+<td align="center">小写字母字符</td>
+<td align="center">[a-z]</td>
+<td align="center">[a-z]</td>
+</tr>
+<tr>
+<td align="center">大写字母字符</td>
+<td align="center">[A-Z]</td>
+<td align="center">[A-Z]</td>
+</tr>
+<tr>
+<td align="center">字母字符</td>
+<td align="center">[a-zA-Z]</td>
+<td align="center">[a-zA-Z]</td>
+</tr>
+<tr>
+<td align="center">可用于标识符的字符</td>
+<td align="center">\w</td>
+<td align="center">\\w</td>
+</tr>
+<tr>
+<td align="center">不可用于标识符的字符</td>
+<td align="center">\W</td>
+<td align="center">\\W</td>
+</tr>
+<tr>
+<td align="center">空格类字符（’\t’,’\n’,’\x0B’,’\f’,’\r’）</td>
+<td align="center">\s</td>
+<td align="center">\\s</td>
+</tr>
+<tr>
+<td align="center">非空格类字符</td>
+<td align="center">\S</td>
+<td align="center">\\S</td>
+</tr>
+<tr>
+<td align="center">字符X出现0次或1次</td>
+<td align="center">?</td>
+<td align="center">X?</td>
+</tr>
+<tr>
+<td align="center">字符X出现0次或多次</td>
+<td align="center">*</td>
+<td align="center">X*</td>
+</tr>
+<tr>
+<td align="center">字符X出现1次或多次</td>
+<td align="center">+</td>
+<td align="center">X+</td>
+</tr>
+<tr>
+<td align="center">字符X恰好出现 n 次</td>
+<td align="center">{n}</td>
+<td align="center">X{n}</td>
+</tr>
+<tr>
+<td align="center">字符X至少出现 n 次</td>
+<td align="center">{n,}</td>
+<td align="center">X{n,}</td>
+</tr>
+<tr>
+<td align="center">字符X出现 n 次到 m 次</td>
+<td align="center">{n,m}</td>
+<td align="center">X{n,m}</td>
+</tr>
+<tr>
+<td align="center">“.”、”*”、”{“、”(“这类作为元字符的字符</td>
+<td align="center">[.]、[*]、[{]、[(]</td>
+<td align="center">[.]、[*]、[{]、[(]</td>
+</tr>
+<tr>
+<td align="center">贪婪匹配（尽可能多的匹配字符）</td>
+<td align="center">.*</td>
+<td align="center">例如：str = “goodgoodsgoodgoose”;  用”[g].*[g]”去匹配得到的是”goodgoodsgoodg”</td>
+</tr>
+<tr>
+<td align="center">懒汉匹配（尽可能少的匹配到你想要的字符那里）</td>
+<td align="center">.*?</td>
+<td align="center">例如：str = “goodgoodsgoodgoose”;  用”[g].*?[g]”去匹配得到的是”goodg”</td>
+</tr>
+</tbody></table>
+<p><strong>匹配参考代码</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line">    <span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line">    String str = <span class="string">"int balance = 0;"</span>;</span><br><span class="line">    <span class="comment">//balance = 0;对应的是 多个标识符 + 0个或多个非标识符 + 等号 + 多个任意字符 + 分号</span></span><br><span class="line">    String regex = <span class="string">"([\\w]+)\\W*[=].*?[;]"</span>;<span class="comment">//这是对应的正则表达式，用（）标出你想要的部分</span></span><br><span class="line">    Pattern p = Pattern.compile(regex);  <span class="comment">//进行编译</span></span><br><span class="line">    Matcher m = p.matcher(str);         <span class="comment">//进行匹配</span></span><br><span class="line">    <span class="keyword">if</span> (m.find()) &#123;    <span class="comment">//如果找到了相匹配的字符串</span></span><br><span class="line">        System.out.println(m.group(<span class="number">1</span>));</span><br><span class="line">        <span class="comment">//group(1)表示（）内的内容；group(0)表示 regex 对应的全部内容</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-代码展示"><a href="#5-代码展示" class="headerlink" title="5 代码展示"></a>5 代码展示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> sampleString;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.FileReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.util.StringTokenizer;</span><br><span class="line"><span class="keyword">import</span> java.util.Vector;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CharToString</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">		<span class="comment">//读取文本</span></span><br><span class="line">		FileReader fr = <span class="keyword">new</span> FileReader(<span class="string">"bank.txt"</span>);  <span class="comment">//按字符 读取 流中数据</span></span><br><span class="line">		BufferedReader burd = <span class="keyword">new</span> BufferedReader(fr);</span><br><span class="line">		String line = burd.readLine();  <span class="comment">//读行</span></span><br><span class="line">		</span><br><span class="line">		Vector&lt;String&gt; vecLine = <span class="keyword">new</span> Vector&lt;&gt;();<span class="comment">//创建存放一整行字符串的对象数组</span></span><br><span class="line">		Vector&lt;String&gt; vecStr = <span class="keyword">new</span> Vector&lt;&gt;();<span class="comment">//创建存放每一小节字符串的对象数组</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//将文本内容分别按行和按块存储在 vecLine 和 vecStr 中</span></span><br><span class="line">		StringBuffer sb = <span class="keyword">new</span> StringBuffer();   <span class="comment">//新建可变字符序列 </span></span><br><span class="line">		<span class="keyword">while</span>(line != <span class="keyword">null</span>) &#123;</span><br><span class="line">			sb.append(line + <span class="string">" "</span>);  <span class="comment">//修改字符串序列</span></span><br><span class="line">			vecLine.add(line);   <span class="comment">//向vecLine中添加一行字符串</span></span><br><span class="line">			line = burd.readLine(); <span class="comment">//读取下一行</span></span><br><span class="line">		&#125;</span><br><span class="line">	    <span class="comment">//利用 StringTokenizer 类来分块，并将字符串存入 vecStr 中</span></span><br><span class="line">		StringTokenizer st = <span class="keyword">new</span> StringTokenizer(sb.toString(),<span class="string">" \n,."</span>);  </span><br><span class="line">        <span class="comment">//用空格符、换行符和.来分块</span></span><br><span class="line">		<span class="keyword">while</span>(st.hasMoreTokens()) &#123;  <span class="comment">//检查是否还有分隔符</span></span><br><span class="line">			String s = st.nextToken().trim().toString();</span><br><span class="line">			<span class="keyword">if</span> (!vecStr.contains(s)) &#123;</span><br><span class="line">				vecStr.add(s);  <span class="comment">//nextToken() 返回从当前位置到下一个分隔符的字符串</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">        </span><br><span class="line">		<span class="comment">//创建存放关键字、操作运算符、变量类型、变量名、方法名的对象数组</span></span><br><span class="line">		Vector&lt;String&gt; vecKey = <span class="keyword">new</span> Vector&lt;&gt;();</span><br><span class="line">		Vector&lt;String&gt; vecOperator = <span class="keyword">new</span> Vector&lt;&gt;();</span><br><span class="line">		Vector&lt;String&gt; vecType = <span class="keyword">new</span> Vector&lt;&gt;();</span><br><span class="line">		Vector&lt;String&gt; vecVar = <span class="keyword">new</span> Vector&lt;&gt;();</span><br><span class="line">		Vector&lt;String&gt; vecMethod = <span class="keyword">new</span> Vector&lt;&gt;();</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//关键字、操作运算符、变量类型、变量名、方法名的正则表达式</span></span><br><span class="line">		<span class="comment">//关键字</span></span><br><span class="line">		String[] regexKey = <span class="keyword">new</span> String[] &#123;<span class="string">"(public)"</span>, <span class="string">"(private)"</span>, <span class="string">"(protected)"</span>,</span><br><span class="line">				<span class="string">"(class)"</span>, <span class="string">"(abstract)"</span>, <span class="string">"(interface)"</span>, <span class="string">"(implements)"</span>, <span class="string">"(extends)"</span>, </span><br><span class="line">                <span class="string">"(new)"</span>, <span class="string">"(super)"</span>, <span class="string">"(this)"</span>,</span><br><span class="line">				<span class="string">"(static)"</span>, <span class="string">"(final)"</span>, <span class="string">"(native)"</span>, <span class="string">"(strictfp)"</span>, <span class="string">"(instanceof)"</span>,</span><br><span class="line">				<span class="string">"(if)"</span>,<span class="string">"(else)"</span>,<span class="string">"(while)"</span>,<span class="string">"(switch)"</span>,<span class="string">"(case)"</span>,<span class="string">"(default)"</span>,<span class="string">"(do)"</span>,</span><br><span class="line">                <span class="string">"(break)"</span>,<span class="string">"(continue)"</span>, <span class="string">"(return)"</span>, </span><br><span class="line">				<span class="string">"(import)"</span>, <span class="string">"(package)"</span>,</span><br><span class="line">				<span class="string">"(byte)"</span>, <span class="string">"(short)"</span>, <span class="string">"(int)"</span>, <span class="string">"(long)"</span>, <span class="string">"(float)"</span>, <span class="string">"(double)"</span>, <span class="string">"(char)"</span>, </span><br><span class="line">                <span class="string">"(boolean)"</span>, <span class="string">"(void)"</span>, <span class="string">"(enum)"</span>, <span class="string">"(null)"</span>, <span class="string">"(true)"</span>, <span class="string">"(false)"</span>, </span><br><span class="line">				<span class="string">"(synchronized)"</span>, <span class="string">"(volatile)"</span>,</span><br><span class="line">				<span class="string">"(throw)"</span>, <span class="string">"(throws)"</span>, <span class="string">"(catch)"</span>, <span class="string">"(try)"</span>, <span class="string">"(finally)"</span>, </span><br><span class="line">				<span class="string">"(assert)"</span>,</span><br><span class="line">				<span class="string">"(transient)"</span>,</span><br><span class="line">				<span class="string">"(goto)"</span>, <span class="string">"(const)"</span>&#125;;</span><br><span class="line">		<span class="comment">//操作运算符</span></span><br><span class="line">		String[] regexOperator = <span class="keyword">new</span> String[] &#123;<span class="string">"([-+*/%&gt;&lt;&amp;^~!=|])"</span>,<span class="string">"([-+*/%&gt;&lt;&amp;^!=|][=])"</span>,</span><br><span class="line">	    		<span class="string">"([+][+])"</span>,<span class="string">"([-][-])"</span>,<span class="string">"([&lt;][&lt;])"</span>,<span class="string">"([&gt;][&gt;])"</span>,<span class="string">"([&amp;][&amp;])"</span>,<span class="string">"([|][|])"</span>,</span><br><span class="line">	    		<span class="string">"([&lt;][&lt;][=])"</span>,<span class="string">"([&gt;][&gt;][=])"</span>,<span class="string">"([&gt;][&gt;][&gt;])"</span>,</span><br><span class="line">                <span class="string">"(.*?.*:.*)"</span>,<span class="string">".*?(instanceof).*?"</span>&#125;;</span><br><span class="line">		<span class="comment">//变量类型:一般会这样出现： public int balance; 或  int balance = 0;  或    int balance;</span></span><br><span class="line">		String[] regexType = <span class="keyword">new</span> String[] &#123;<span class="string">"([\\w]+) [\\w]+\\W*[=].+"</span>,</span><br><span class="line">				<span class="string">"public ([\\w]+) [\\w]+"</span>,</span><br><span class="line">				<span class="string">"private ([\\w]+) [\\w]+"</span>,</span><br><span class="line">				<span class="string">"protected ([\\w]+) [\\w]+"</span>&#125;;</span><br><span class="line">		<span class="comment">//变量名:后面带 = 或；如 int balance; 或     int balance = 0; 或int balance=0;</span></span><br><span class="line">		String[] regexVar = <span class="keyword">new</span> String[] &#123;<span class="string">"([\\w]+)[;]"</span>,<span class="string">"([\\w]+)\\W*[=].*?[;]"</span>&#125;;</span><br><span class="line">		<span class="comment">//方法名：后面带（）或（参数）</span></span><br><span class="line">		String regexMethod = <span class="string">"(.*)[(].*"</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//变量类型 一定与其他字符用空格分割开了，所以最好从一行中匹配。</span></span><br><span class="line">        <span class="comment">//变量名需要依靠其他字符来辨识，所以最好从一行字符串中去匹配。</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;vecLine.size();i++) &#123;</span><br><span class="line">			<span class="comment">//变量类型 </span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; regexType.length;j++) &#123;</span><br><span class="line">				Pattern pType = Pattern.compile(regexType[j]);</span><br><span class="line">				Matcher mType = pType.matcher(vecLine.elementAt(i));</span><br><span class="line">				<span class="keyword">if</span> (mType.find()) &#123;</span><br><span class="line">					<span class="keyword">if</span> (!vecType.contains(mType.group(<span class="number">1</span>))) &#123;</span><br><span class="line">						vecType.add(mType.group(<span class="number">1</span>));</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//变量名</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; regexVar.length;j++) &#123;</span><br><span class="line">				Pattern pVar = Pattern.compile(regexVar[j]);</span><br><span class="line">				Matcher mVar = pVar.matcher(vecLine.elementAt(i));</span><br><span class="line">				<span class="keyword">if</span> (mVar.find()) &#123;</span><br><span class="line">					<span class="keyword">if</span> (!vecVar.contains(mVar.group(<span class="number">1</span>))) &#123;</span><br><span class="line">						vecVar.add(mVar.group(<span class="number">1</span>));</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//关键字、操作运算符、方法名这类词汇可以直接在一小块字符中查找匹配</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; vecStr.size(); i++) &#123;</span><br><span class="line">			<span class="comment">//关键字</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; regexKey.length;j++) &#123;</span><br><span class="line">				Pattern pKey = Pattern.compile(regexKey[j]);</span><br><span class="line">				Matcher mKey = pKey.matcher(vecStr.elementAt(i));</span><br><span class="line">				<span class="keyword">if</span> (mKey.find()) &#123;</span><br><span class="line">					<span class="keyword">if</span> (!vecKey.contains(mKey.group(<span class="number">1</span>))) &#123;</span><br><span class="line">						vecKey.add(mKey.group(<span class="number">1</span>));</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//操作运算符</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; regexOperator.length;j++) &#123;</span><br><span class="line">				Pattern pOper = Pattern.compile(regexOperator[j]);</span><br><span class="line">				Matcher mOper = pOper.matcher(vecStr.elementAt(i));</span><br><span class="line">				<span class="keyword">if</span> (mOper.find()) &#123;</span><br><span class="line">					<span class="keyword">if</span> (!vecOperator.contains(mOper.group(<span class="number">1</span>))) &#123;</span><br><span class="line">						vecOperator.add(mOper.group(<span class="number">1</span>));</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//方法名</span></span><br><span class="line">			Pattern pMethod = Pattern.compile(regexMethod);</span><br><span class="line">			Matcher mMethod = pMethod.matcher(vecStr.elementAt(i));</span><br><span class="line">			<span class="keyword">if</span> (mMethod.find()) &#123;</span><br><span class="line">				<span class="keyword">if</span> (!vecMethod.contains(mMethod.group(<span class="number">1</span>))) &#123;</span><br><span class="line">					vecMethod.add(mMethod.group(<span class="number">1</span>));</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="comment">//输出结果</span></span><br><span class="line">		System.out.println(<span class="string">"关键字："</span> + vecKey);</span><br><span class="line">		System.out.println(<span class="string">"操作运算符："</span> + vecOperator);</span><br><span class="line">		System.out.println(<span class="string">"变量类型："</span> + vecType);</span><br><span class="line">		System.out.println(<span class="string">"变量名："</span> + vecVar);</span><br><span class="line">		System.out.println(<span class="string">"方法名："</span> + vecMethod);		</span><br><span class="line">		burd.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-结果反馈"><a href="#6-结果反馈" class="headerlink" title="6 结果反馈"></a>6 结果反馈</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">关键字：[package, public, class, int, this, void, if, else, do, double, return]</span><br><span class="line">操作运算符：[=, +, +=, &gt;, -, -=]</span><br><span class="line">变量类型：[class, String, void, double]</span><br><span class="line">变量名：[bank, balance, account, name, openTime, id, money]</span><br><span class="line">方法名：[UserInfo, deposit, println, withdrawal, <span class="keyword">if</span>, getBalance, getInfo]</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-问题与反思"><a href="#7-问题与反思" class="headerlink" title="7 问题与反思"></a>7 问题与反思</h2><p>1.匹配变量类型过程中有些字符串难以区分。</p>
+<p>例如：package bank; 和 int balance; 结构相同，在利用”([\w]+) [\w]+\\W*[=]*.*“匹配时容易把 package 看作是变量类型。此代码中没有进行区分，默认只提取 int balance = 0; 中的类型变量</p>
+<p>2.此代码仅能对较简单的 Java 程序进行词义分析，无法分辨出注释内容和非注释内容。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
-  <nav class="menu-container">
-  <ul class="menu-items">
-    <li><a href="/"><i class="fa fa-home fa-fw"></i>首页</a></li>
-    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>归档</a></li>
-    <li class="has-sub"><span class="dropdown-heading">
-      <i class="fa fa-bookmark fa-fw"></i>页面</span>
-        <ul>
-          <li><a href="/guestbook">留言</a></li>
-        <li><a href="/about">关于</a></li>
-        </ul>
-    </li>
-    <li class="has-sub"><span class="dropdown-heading">
-      <i class="fa fa-link fa-fw"></i>友链</span>
-        <ul>
-          <li> <a href="https://lx.blleng.cn" target="_blank">Theme-Lx</a></li>
-        </ul>
-    </li>
-  </ul>
-  </nav>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ouclittlepumpkin.github.io/2019/10/23/%E6%90%AD%E5%BB%BA%E5%A5%BD-Hexo-%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E5%90%8E%EF%BC%8C%E5%A6%82%E4%BD%95%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小南瓜">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sunburst">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/23/%E6%90%AD%E5%BB%BA%E5%A5%BD-Hexo-%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E5%90%8E%EF%BC%8C%E5%A6%82%E4%BD%95%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" itemprop="url">搭建好-Hexo-博客框架后，如何发表博客文章</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-23T16:04:07+08:00">
+                2019-10-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h2><p>打开 hexo 根目录，选中文件路径栏，输入cmd然后回车，进入命令行窗口。</p>
+<p>输入如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;搭建好 Hexo 博客框架后，如何发表博客文章&quot;</span><br></pre></td></tr></table></figure>
+
+<p>就可以在文件下新建一的 .md 文件，即 Markdown 文件，本地进行编辑就好了。</p>
+<p><em>（关于Markdown 文本编辑器，我选择的是 Typora 编辑器(一个所写即所见的编辑器)，适合熟悉 Markdown 语法的朋友。）</em></p>
+<p><em>（关于 Markdown 语法，新手可以先去 CSDN 点开“写博客”，有特别详细易懂的写法教程。）</em></p>
+<h2 id="发布的命令"><a href="#发布的命令" class="headerlink" title="发布的命令"></a>发布的命令</h2><p>文章编辑好了就可以发布了。</p>
+<p>先清理一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<p>生成一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>启动一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>打开自己的博客网页，刷新一下，就可以看到更新的博客啦！</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">小南瓜</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-[object Object]"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小南瓜</span>
+
+  
 </div>
 
-<div class="gototop js-top">
-  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
-</div>
-<script src="/js/jquery.easing.min.js"></script>
-<script src="/js/jquery.waypoints.min.js"></script>
-<script src="/js/jquery.stellar.min.js"></script>
-<script src="/js/main.js"></script>
 
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>
