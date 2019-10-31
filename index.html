@@ -229,6 +229,144 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ouclittlepumpkin.github.io/2019/11/01/%E7%AE%80%E5%8D%95%E7%9A%84%E6%89%91%E5%85%8B%E7%89%8C%E7%B1%BB%EF%BC%88Java%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小南瓜">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sunburst">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/01/%E7%AE%80%E5%8D%95%E7%9A%84%E6%89%91%E5%85%8B%E7%89%8C%E7%B1%BB%EF%BC%88Java%EF%BC%89/" itemprop="url">简单的扑克牌类（Java）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-01T00:04:51+08:00">
+                2019-11-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="设计要求"><a href="#设计要求" class="headerlink" title="设计要求"></a>设计要求</h2><p>结合面向对象设计原则，分析和设计模拟扑克游戏的洗牌过程。</p>
+<ol>
+<li>编程定义一个表示扑克牌的类 Poke，用 suit 来表示扑克牌的花色，用 face 来表示扑克牌的牌面值，每副牌为 52 张，不考虑包含大小王。</li>
+<li>假设扑克牌游戏需要 2 副（或2副以上）的牌，实现 Poke 类中的静态方法，模拟备牌、洗牌、发牌，以及将这些扑克牌分给参加游戏的所有人，并将参加扑克牌游戏的所有人的扑克牌输出。</li>
+</ol>
+<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><p><strong>备牌:</strong><br>获取牌的副数 <code>n</code>，新建一个 <code>52n</code> 大小的空字符串数组 <code>cards</code> 来保存 <code>52n</code> 张扑克牌。通过给数组赋值的形式将牌面信息加入到字符串数组中。</p>
+<ol>
+<li><code>cards</code>初始化长度为 <code>52n</code> 。</li>
+<li>对于赋值，找到数组序号与对应牌面关系，即可利用 for 循环简单赋值。<br>令 <code>suit = {&quot;♠&quot;,&quot;♦&quot;,&quot;♥&quot;,&quot;♣&quot;},face = {&quot;A&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;J&quot;,&quot;Q&quot;,&quot;K&quot;}</code>，<br>则有<code>cards[i] = suit[(i/13)%4]+face[(i%13)]</code></li>
+</ol>
+<p><strong>洗牌:</strong><br>随机生成两个 <code>52n</code> 内的整数 <code>r1</code> 和 <code>r2</code>，交换 <code>cards[r1]</code> 和 <code>cards[r2]</code>，这个过程要重复多次。<br><strong>发牌:</strong><br>获取参与人数 <code>m</code>，找出某人与牌序列的数值关系，将该张牌抽出，放进一个新的字符串数组 <code>card</code> 中并打印即可。</p>
+<ol>
+<li><code>card</code>的初始化长度为 牌数/人数，并向上取整。<br><code>(int)Math.ceil((double)cards.length/m)</code></li>
+<li>第<code>i</code>位玩家分得的第<code>k</code>张牌为<code>card[k] = cards[i + m * k]</code>。</li>
+</ol>
+<p><strong>示牌:</strong><br>利用 for 循环将字符串数组内容输出即可。</p>
+<h2 id="Poke类代码"><a href="#Poke类代码" class="headerlink" title="Poke类代码"></a>Poke类代码</h2><p><strong>Poke.java</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Poke</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String[] suit = &#123;<span class="string">"♠"</span>,<span class="string">"♦"</span>,<span class="string">"♥"</span>,<span class="string">"♣"</span>&#125;;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String[] face = &#123;<span class="string">"A"</span>,<span class="string">"2"</span>,<span class="string">"3"</span>,<span class="string">"4"</span>,<span class="string">"5"</span>,<span class="string">"6"</span>,<span class="string">"7"</span>,<span class="string">"8"</span>,<span class="string">"9"</span>,<span class="string">"10"</span>,<span class="string">"J"</span>,<span class="string">"Q"</span>,<span class="string">"K"</span>&#125;;</span><br><span class="line">	<span class="comment">//备牌</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> String[] createCard(<span class="keyword">int</span> number) &#123;</span><br><span class="line">		String[] cards =<span class="keyword">new</span> String[number * <span class="number">52</span>];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i= <span class="number">0</span>; i &lt; number * <span class="number">52</span>; i++) &#123;</span><br><span class="line">			cards[i] = suit[(i/<span class="number">13</span>)%<span class="number">4</span>]+face[(i%<span class="number">13</span>)];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> cards;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//示牌</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">display</span><span class="params">(String[] cards)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;cards.length;i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(i%<span class="number">52</span> == <span class="number">0</span> &amp;&amp; i &gt; <span class="number">0</span>) System.out.print(<span class="string">"\n"</span>);</span><br><span class="line">			System.out.print(cards[i]+<span class="string">" "</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.print(<span class="string">"\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//洗牌</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">shuffle</span><span class="params">(String[] cards)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">            Random ran = <span class="keyword">new</span> Random();</span><br><span class="line">            <span class="keyword">int</span> r1 = ran.nextInt(cards.length);</span><br><span class="line">            <span class="keyword">int</span> r2 = ran.nextInt(cards.length);</span><br><span class="line">            String temp = <span class="keyword">new</span> String();</span><br><span class="line">            temp = cards[r1];</span><br><span class="line">            cards[r1] = cards[r2];</span><br><span class="line">            cards[r2] = temp;</span><br><span class="line">    	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//分牌</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">distribute</span><span class="params">(String[] cards, <span class="keyword">int</span> player)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; player; i++) &#123;</span><br><span class="line">            String[] card = <span class="keyword">new</span> String[(<span class="keyword">int</span>)Math.ceil((<span class="keyword">double</span>)cards.length/player)];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; card.length &amp;&amp; player * k+i &lt; cards.length; k++) &#123;</span><br><span class="line">    			card[k] = cards[player * k+i];</span><br><span class="line">    		&#125;</span><br><span class="line">            System.out.print(<span class="string">"第"</span>+(i+<span class="number">1</span>)+<span class="string">"位玩家的牌："</span>);</span><br><span class="line">            display(card);</span><br><span class="line">    	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@SuppressWarnings</span>(<span class="string">"resource"</span>)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"该扑克游戏需要几付扑克牌？"</span>);</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> num = sc.nextInt();</span><br><span class="line">		String[] cards = Poke.createCard(num);</span><br><span class="line">		System.out.println(<span class="string">"该扑克游戏有几个玩家？"</span>);</span><br><span class="line">		Scanner sp = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> per = sp.nextInt();</span><br><span class="line">		System.out.println(<span class="string">"显示所有的牌："</span>);</span><br><span class="line">		Poke.display(cards);</span><br><span class="line">		Poke.shuffle(cards);</span><br><span class="line">		System.out.println(<span class="string">"显示分配给每个人的牌:"</span>);</span><br><span class="line">		Poke.distribute(cards,per);</span><br><span class="line">		sc.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">该扑克游戏需要几付扑克牌？</span><br><span class="line"><span class="number">3</span></span><br><span class="line">该扑克游戏有几个玩家？</span><br><span class="line"><span class="number">8</span></span><br><span class="line">显示所有的牌：</span><br><span class="line">♠A ♠<span class="number">2</span> ♠<span class="number">3</span> ♠<span class="number">4</span> ♠<span class="number">5</span> ♠<span class="number">6</span> ♠<span class="number">7</span> ♠<span class="number">8</span> ♠<span class="number">9</span> ♠<span class="number">10</span> ♠J ♠Q ♠K ♦A ♦<span class="number">2</span> ♦<span class="number">3</span> ♦<span class="number">4</span> ♦<span class="number">5</span> ♦<span class="number">6</span> ♦<span class="number">7</span> ♦<span class="number">8</span> ♦<span class="number">9</span> ♦<span class="number">10</span> ♦J ♦Q ♦K ♥A ♥<span class="number">2</span> ♥<span class="number">3</span> ♥<span class="number">4</span> ♥<span class="number">5</span> ♥<span class="number">6</span> ♥<span class="number">7</span> ♥<span class="number">8</span> ♥<span class="number">9</span> ♥<span class="number">10</span> ♥J ♥Q ♥K ♣A ♣<span class="number">2</span> ♣<span class="number">3</span> ♣<span class="number">4</span> ♣<span class="number">5</span> ♣<span class="number">6</span> ♣<span class="number">7</span> ♣<span class="number">8</span> ♣<span class="number">9</span> ♣<span class="number">10</span> ♣J ♣Q ♣K </span><br><span class="line">♠A ♠<span class="number">2</span> ♠<span class="number">3</span> ♠<span class="number">4</span> ♠<span class="number">5</span> ♠<span class="number">6</span> ♠<span class="number">7</span> ♠<span class="number">8</span> ♠<span class="number">9</span> ♠<span class="number">10</span> ♠J ♠Q ♠K ♦A ♦<span class="number">2</span> ♦<span class="number">3</span> ♦<span class="number">4</span> ♦<span class="number">5</span> ♦<span class="number">6</span> ♦<span class="number">7</span> ♦<span class="number">8</span> ♦<span class="number">9</span> ♦<span class="number">10</span> ♦J ♦Q ♦K ♥A ♥<span class="number">2</span> ♥<span class="number">3</span> ♥<span class="number">4</span> ♥<span class="number">5</span> ♥<span class="number">6</span> ♥<span class="number">7</span> ♥<span class="number">8</span> ♥<span class="number">9</span> ♥<span class="number">10</span> ♥J ♥Q ♥K ♣A ♣<span class="number">2</span> ♣<span class="number">3</span> ♣<span class="number">4</span> ♣<span class="number">5</span> ♣<span class="number">6</span> ♣<span class="number">7</span> ♣<span class="number">8</span> ♣<span class="number">9</span> ♣<span class="number">10</span> ♣J ♣Q ♣K </span><br><span class="line">♠A ♠<span class="number">2</span> ♠<span class="number">3</span> ♠<span class="number">4</span> ♠<span class="number">5</span> ♠<span class="number">6</span> ♠<span class="number">7</span> ♠<span class="number">8</span> ♠<span class="number">9</span> ♠<span class="number">10</span> ♠J ♠Q ♠K ♦A ♦<span class="number">2</span> ♦<span class="number">3</span> ♦<span class="number">4</span> ♦<span class="number">5</span> ♦<span class="number">6</span> ♦<span class="number">7</span> ♦<span class="number">8</span> ♦<span class="number">9</span> ♦<span class="number">10</span> ♦J ♦Q ♦K ♥A ♥<span class="number">2</span> ♥<span class="number">3</span> ♥<span class="number">4</span> ♥<span class="number">5</span> ♥<span class="number">6</span> ♥<span class="number">7</span> ♥<span class="number">8</span> ♥<span class="number">9</span> ♥<span class="number">10</span> ♥J ♥Q ♥K ♣A ♣<span class="number">2</span> ♣<span class="number">3</span> ♣<span class="number">4</span> ♣<span class="number">5</span> ♣<span class="number">6</span> ♣<span class="number">7</span> ♣<span class="number">8</span> ♣<span class="number">9</span> ♣<span class="number">10</span> ♣J ♣Q ♣K </span><br><span class="line">显示分配给每个人的牌:</span><br><span class="line">第<span class="number">1</span>位玩家的牌：♦<span class="number">7</span> ♦<span class="number">9</span> ♠<span class="number">4</span> ♥A ♥A ♥<span class="number">3</span> ♥<span class="number">4</span> ♣<span class="number">5</span> ♥<span class="number">2</span> ♦<span class="number">4</span> ♣<span class="number">8</span> ♣<span class="number">4</span> ♠<span class="number">4</span> ♥J ♦J ♦Q ♦J ♣<span class="number">9</span> ♣<span class="number">7</span> ♦<span class="number">2</span> </span><br><span class="line">第<span class="number">2</span>位玩家的牌：♣<span class="number">6</span> ♥<span class="number">3</span> ♦<span class="number">5</span> ♠<span class="number">8</span> ♦<span class="number">7</span> ♥<span class="number">9</span> ♦A ♣<span class="number">10</span> ♠<span class="number">9</span> ♠<span class="number">9</span> ♥<span class="number">7</span> ♦K ♣<span class="number">2</span> ♦<span class="number">6</span> ♦A ♣J ♦<span class="number">4</span> ♥<span class="number">4</span> ♠<span class="number">8</span> ♥<span class="number">5</span> </span><br><span class="line">第<span class="number">3</span>位玩家的牌：♠Q ♥A ♥Q ♣K ♣<span class="number">9</span> ♥K ♥K ♠K ♠<span class="number">2</span> ♠<span class="number">5</span> ♠J ♥Q ♣A ♠<span class="number">3</span> ♣<span class="number">9</span> ♠K ♥<span class="number">8</span> ♠<span class="number">7</span> ♦<span class="number">5</span> ♥Q </span><br><span class="line">第<span class="number">4</span>位玩家的牌：♥<span class="number">7</span> ♥<span class="number">7</span> ♠<span class="number">5</span> ♥<span class="number">4</span> ♦<span class="number">3</span> ♦J ♠Q ♠A ♣Q ♥<span class="number">9</span> ♦<span class="number">10</span> ♣A ♥<span class="number">10</span> ♠<span class="number">3</span> ♥<span class="number">6</span> ♠<span class="number">10</span> ♣<span class="number">7</span> ♦<span class="number">2</span> ♥J ♠A </span><br><span class="line">第<span class="number">5</span>位玩家的牌：♥<span class="number">2</span> ♠<span class="number">8</span> ♥<span class="number">10</span> ♠<span class="number">6</span> ♦K ♦<span class="number">8</span> ♣K ♣A ♣<span class="number">2</span> ♦<span class="number">3</span> ♣J ♣<span class="number">4</span> ♥<span class="number">3</span> ♠K ♦Q ♦<span class="number">10</span> ♠<span class="number">2</span> ♣<span class="number">6</span> ♥<span class="number">8</span> <span class="keyword">null</span> </span><br><span class="line">第<span class="number">6</span>位玩家的牌：♦<span class="number">10</span> ♠<span class="number">6</span> ♦<span class="number">5</span> ♦<span class="number">7</span> ♥<span class="number">5</span> ♦<span class="number">9</span> ♣<span class="number">5</span> ♠<span class="number">3</span> ♦<span class="number">2</span> ♥<span class="number">6</span> ♠<span class="number">7</span> ♠<span class="number">2</span> ♣<span class="number">3</span> ♣<span class="number">5</span> ♣<span class="number">3</span> ♦<span class="number">8</span> ♣<span class="number">4</span> ♦K ♥<span class="number">2</span> <span class="keyword">null</span> </span><br><span class="line">第<span class="number">7</span>位玩家的牌：♠<span class="number">9</span> ♣<span class="number">2</span> ♦<span class="number">4</span> ♠<span class="number">10</span> ♣<span class="number">8</span> ♦<span class="number">6</span> ♠Q ♦Q ♦A ♠<span class="number">10</span> ♣<span class="number">10</span> ♥J ♥<span class="number">5</span> ♥<span class="number">8</span> ♠J ♦<span class="number">8</span> ♠J ♠<span class="number">4</span> ♠A <span class="keyword">null</span> </span><br><span class="line">第<span class="number">8</span>位玩家的牌：♣Q ♦<span class="number">6</span> ♥<span class="number">10</span> ♥K ♠<span class="number">6</span> ♣<span class="number">7</span> ♦<span class="number">3</span> ♣J ♥<span class="number">6</span> ♣<span class="number">10</span> ♠<span class="number">7</span> ♠<span class="number">5</span> ♣<span class="number">8</span> ♣K ♣<span class="number">3</span> ♣Q ♦<span class="number">9</span> ♥<span class="number">9</span> ♣<span class="number">6</span> <span class="keyword">null</span></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ouclittlepumpkin.github.io/2019/10/23/Java-%E5%88%9D%E5%AD%A6%E8%80%85-%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%8D%E4%B9%89%E5%88%86%E6%9E%90-%E5%8C%B9%E9%85%8D%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E3%80%81%E5%8F%98%E9%87%8F%E5%90%8D%E3%80%81%E6%96%B9%E6%B3%95%E5%90%8D%E4%BB%A5%E5%8F%8A%E6%93%8D%E4%BD%9C%E8%BF%90%E7%AE%97%E7%AC%A6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -756,7 +894,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -769,7 +907,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
